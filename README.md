@@ -55,4 +55,6 @@
     22. Discuss methods you will use to protect information and data.
     23. Research what your legal obligations are in relation to handling user data.
 
-    Thanh in a tree by himself.
+Pony should pony pony
+Rainbow Blitz was here
+Hi Blitzy says Prince Artimis, Why are thou here in this world?
