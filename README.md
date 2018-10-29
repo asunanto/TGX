@@ -1,3 +1,4 @@
+    Rails project
     1. What is the need (i.e. challenge) that you will be addressing in your project?
        The need of game exchange 
        reason: not big market for exchanging game, a place where we can upload image 
