@@ -53,3 +53,5 @@
     21. Discuss and analyse requirements related to information system security.
     22. Discuss methods you will use to protect information and data.
     23. Research what your legal obligations are in relation to handling user data.
+
+    Mitch and Bo sitting in a tree, K I S S I N G.
