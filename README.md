@@ -66,9 +66,12 @@
     23. Research what your legal obligations are in relation to handling user data.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Prince Artemis is best PONI
 mitch is soooooo GOOD LOOKING!!!!!
 
 =======
 >>>>>>> c5e81f1a45b9a55719da6637c7e9fca1618faa43
+=======
+>>>>>>> eec695f286128fc453665f35156c76e3a5e1c7ac
