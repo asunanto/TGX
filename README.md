@@ -65,11 +65,4 @@
     22. Discuss methods you will use to protect information and data.
     23. Research what your legal obligations are in relation to handling user data.
 
-<<<<<<< HEAD
-Pony should pony pony
-Rainbow Blitz was here
-Hi Blitzy says Prince Artimis, Why are thou here in this world?
 
-mitch is soooooo GOOD LOOKING!!!!!
-=======
->>>>>>> eec695f286128fc453665f35156c76e3a5e1c7ac
