@@ -6,13 +6,19 @@
 </p>
 
 <p>
+	<% if @post.image.attached? %>
+    		<%= cl_image_tag(@post.image.key, :width=>200, :crop=>"fit") %>
+  	<% end %>
+</p>
+
+<p>
   <strong>Price:</strong>
-  <%= @post.price %>
+  $<%= @post.price %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @post.user_id %>
+  <%= @post.user.username %>
 </p>
 
 <p>

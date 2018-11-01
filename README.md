@@ -119,3 +119,4 @@
     
     23. Research what your legal obligations are in relation to handling user data.
 
+
