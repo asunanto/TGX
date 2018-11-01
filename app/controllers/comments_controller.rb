@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
     comment.flagged = false
     comment.save
     
-    redirect_to root_path
+    redirect_to post_path(comment.post_id)
 
         # question = Question.find(answer_params[:question_id])
         # answer = Answer.create(answer_params)
