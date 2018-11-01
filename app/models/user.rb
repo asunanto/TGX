@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  # rolify
+  rolify
   has_many :posts
   has_many :comments
   # Include default devise modules. Others available are:
