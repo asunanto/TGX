@@ -41,6 +41,7 @@
 
 
     8. Describe the architecture of your App.
+    # write later
         Using MVC-- google MVC rails
 
     9. Explain the different high-level components (abstractions) in your App.
@@ -55,21 +56,54 @@
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 
     12. Discuss the database relations to be implemented.
-    User can CRUD their own posts.
-    User can CRUD their own comments
-    *explain from model
+    Our database consist of Users, Posts, comments and post_image
+    each user has zero or many relationship to posts and comments
+    each post has zero or many relationship to comments
+    each post has zero or many relationship to post_image
+    a comment belongs to one post and one user
+    a post belongs to one user
 
     13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-    *es
+    our project 
+    Under the User model, each user has many posts and comments.
+    Under the Post model, each post has many comments and many post_image and each comments belong to a post. 
+    Under the Comment model,each comments belongs to a user and a post.
+
 
     14. Provide your database schema design.
     *screenshot schema.rb
 
     15. Provide User stories for your App.
+    User
+    Buy
+    - access an item with a list of games
+    - make comments on the item
+    - purchase on item
+    - add it to the cart (optional)
+    - can see if the item is sold
+
+    Sell
+    - upload image of the item selling
+    - remove items they are selling
+    - can relist the item as sold
+    - can pick a category for item (drop down box)
+    - add description and price
+    - seller can CRUD their own post
+    - selling options – delivery / pick up
+    - contact details – suburb and email
+
+    As anonymous,
+    - must register an account
+    - Only View home page
+
+    Admin
+    - admin can remove and update every post (admin have the abillty to update fields of the items)
+    - Delete users who are abusing the service (blocking considered)
+
     16. Provide Wireframes for your App.
+
     17. Describe the way tasks are allocated and tracked in your project.
-        https://trello.com/b/dRldFKvs
-        trello
+        trello  https://trello.com/b/dRldFKvs
 
     18. Discuss how Agile methodology is being implemented in your project.
         Our team have agreed on a stand up meeting at 10am every morning. we tracked everyone's progress and address our    issues during the meeting. if there is any problems and the task is of a high priority, we can have more of our members working on it.
