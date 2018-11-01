@@ -20,7 +20,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.product_name %></td>
-        <td><%= post.price %></td>
+        <td>$<%= post.price %></td>
         <td><%= post.user_id %></td>
         <td><%= post.location %></td>
         <td><%= post.description %></td>
