@@ -66,8 +66,12 @@ gem "dotenv", "~> 2.5"
 
 gem "devise", "~> 4.5"
 
+
+gem "rolify", "~> 5.2"
+
 gem "cloudinary", "~> 1.9"
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
 gem "image_processing", "~> 1.7"
+
