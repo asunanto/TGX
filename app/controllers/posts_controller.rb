@@ -10,6 +10,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+      @post = Post.find(params[:id])
+      @comments = @post.comments.all.order(created_at: :desc)
     
   end
 
@@ -26,6 +28,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
+    @post.sold = false
+    @post.flagged = false
+    @post.save 
 
     respond_to do |format|
       if @post.save
