@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Posts</h1>
-
+ 
 <table>
   <thead>
     <tr>
       <th>Product name</th>
       <th>Price</th>
+      <th>Image</th>
       <th>User</th>
       <th>Location</th>
       <th>Description</th>
@@ -20,15 +20,22 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.product_name %></td>
-        <td><%= post.price %></td>
-        <td><%= post.user_id %></td>
+        <td>$<%= post.price %></td>
+        <td>
+          <% if post.image.attached? %>
+        	<%= cl_image_tag(post.image.key, :width=>100, :crop=>"fit") %>
+ 	        <% end %>
+        </td>
+        <td><%= post.user.username %></td>
         <td><%= post.location %></td>
         <td><%= post.description %></td>
         <td><%= post.sold %></td>
         <td><%= post.flagged %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if post.can_change?(current_user) %>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>  
       </tr>
     <% end %>
   </tbody>
