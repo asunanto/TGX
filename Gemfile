@@ -65,3 +65,5 @@ gem "dotenv", "~> 2.5"
 
 
 gem "devise", "~> 4.5"
+
+gem "rolify", "~> 5.2"
