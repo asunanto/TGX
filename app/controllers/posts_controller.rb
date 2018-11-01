@@ -32,6 +32,7 @@ class PostsController < ApplicationController
     @post.sold = false
     @post.flagged = false
     @post.save 
+    @post.image.attach(post_params[:image])
 
     respond_to do |format|
       if @post.save
@@ -76,6 +77,12 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:product_name, :price, :user_id, :location, :description, :sold, :flagged)
+      params.require(:post).permit(:product_name, :price, :user_id, :location, :description, :sold, :flagged, :image)
+    end
+
+    def check_permissions
+      if !@post.can_change?(current_user)
+        redirect_to(request.referrer || root_path, :alert => "You are not authorized to perform that 		          action!")
+      end
     end
 end

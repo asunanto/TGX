@@ -6,13 +6,19 @@
 </p>
 
 <p>
+	<% if @post.image.attached? %>
+    		<%= cl_image_tag(@post.image.key, :width=>200, :crop=>"fit") %>
+  	<% end %>
+</p>
+
+<p>
   <strong>Price:</strong>
-  <%= @post.price %>
+  $<%= @post.price %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @post.user_id %>
+  <%= @post.user.username %>
 </p>
 
 <p>
@@ -34,8 +40,10 @@
   <strong>Flagged:</strong>
   <%= @post.flagged %>
 </p>
+<% if @post.can_change?(current_user) %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 
 
