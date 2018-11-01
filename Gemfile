@@ -65,3 +65,5 @@ gem "dotenv", "~> 2.5"
 
 
 gem "devise", "~> 4.5"
+
+gem "stripe", "~> 3.29"
