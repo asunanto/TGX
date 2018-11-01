@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <h1>Posts</h1>
-
+ 
 <table>
   <thead>
     <tr>
@@ -21,12 +21,12 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.product_name %></td>
+        <td>$<%= post.price %></td>
         <td>
           <% if post.image.attached? %>
         	<%= cl_image_tag(post.image.key, :width=>100, :crop=>"fit") %>
  	        <% end %>
         </td>
-        <td><%= post.price %></td>
         <td><%= post.user_id %></td>
         <td><%= post.location %></td>
         <td><%= post.description %></td>
