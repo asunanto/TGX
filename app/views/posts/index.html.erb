@@ -20,7 +20,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.product_name %></td>
-        <td>$<%= post.price %></td>
+        <td><%= number_to_currency(post.price) %></td>
         <td>
           <% if post.image.attached? %>
         	<%= cl_image_tag(post.image.key, :width=>100, :crop=>"fit") %>

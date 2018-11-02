@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 
   
     def price_in_cents
-        (price * 100).to_i.round(2)
+        (price * 100).to_i
     end
     
     def can_change?(user)
