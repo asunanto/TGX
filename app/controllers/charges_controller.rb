@@ -18,9 +18,13 @@ class ChargesController < ApplicationController
     :amount      => @amount,
     :description => @post.product_name,
     :currency    => 'aud'
-    )
     
-  rescue Stripe::CardError => e
+    )
+    flash[:notice] = "Thanks, you purchased #{@post.product_name} for A$ #{@post.price}"
+    redirect_to posts_path
+    @post.destroy
+
+    rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
   end
