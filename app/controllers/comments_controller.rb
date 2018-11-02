@@ -19,6 +19,9 @@ class CommentsController < ApplicationController
 
   # GET /comments/1/edit
   def edit
+    #render json: @comment
+    
+    
   end
 
   # POST /comments
@@ -26,12 +29,12 @@ class CommentsController < ApplicationController
   def create
     # render json: comment_params
     # post = Post.find(params[:comment][:post_id])
-    comment = Comment.new(comment_params)
-    comment.user = current_user
-    comment.flagged = false
-    comment.save
+    @comment = Comment.new(comment_params)
+    @comment.user = current_user
+    @comment.flagged = false
+    @comment.save
     
-    redirect_to post_path(comment.post_id)
+    redirect_to post_path(@comment.post_id)
 
         # question = Question.find(answer_params[:question_id])
         # answer = Answer.create(answer_params)
@@ -54,7 +57,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to post_path(@comment.post_id), notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -66,9 +69,10 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @post_id = @comment.post_id
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to post_path(@post_id), notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

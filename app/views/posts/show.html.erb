@@ -77,7 +77,13 @@
     <h4 class="media-heading"><%= comment.user.username %>  commented:</h4>
     <%= time_ago_in_words(comment.created_at)+" ago" %><br>
     <%= comment.content %>
+    <% if comment.user == current_user || current_user.has_role?(:admin) %>
+      <%= link_to 'Edit', edit_comment_path(comment) %> 
+      <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    
   </div>
+  
 <% end %>
 
 
