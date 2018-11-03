@@ -20,6 +20,7 @@ class ChargesController < ApplicationController
     :currency    => 'aud'
     
     )
+
     flash[:notice] = "Thanks, you purchased #{@post.product_name} for A$#{'%.2f' % @post.price.round(2)}"
     redirect_to posts_path
     @post.destroy
