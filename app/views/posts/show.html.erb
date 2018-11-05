@@ -10,6 +10,9 @@
     		<%= cl_image_tag(@post.image.key, :width=>200, :crop=>"fit") %>
   	<% end %>
 </p>
+<div>
+  <%= video_tag(url_for(@post.video), style:'width:40%; height:auto', controls: '')%>
+</div>
 
 <p>
   <strong>Price:</strong>

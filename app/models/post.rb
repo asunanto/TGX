@@ -3,6 +3,7 @@ class Post < ApplicationRecord
     belongs_to :user
     belongs_to :category
     has_one_attached :image    
+    has_one_attached :video
     #resourcify
     validates :product_name, :price, :location, :description, :presence => true
 
