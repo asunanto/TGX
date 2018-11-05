@@ -5,8 +5,8 @@ class Post < ApplicationRecord
 
     validates :product_name, length: {minimum: 5}
     validates :price, numericality: { only_integer: true }
-    validates :location, length: {minimum: 1}
-    validates :sold, :flagged, absence: true 
+    validates :location, presence: true
+    validates :sold, :flagged, inclusion: { in: [true, false] }
   
     def price_in_cents
         (price * 100).to_i

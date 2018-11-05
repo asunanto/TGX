@@ -64,7 +64,8 @@ RSpec.describe PostsController, type: :controller do
         description:'',
         sold: nil,
         flagged: nil,
-        user_id: user
+        #must be a valid attribute or else the program will redirect to sign in page
+        user_id: user 
       }
     }
     
