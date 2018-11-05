@@ -32,11 +32,11 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.sold = false
     @post.flagged = false
-    @post.save 
     @post.image.attach(post_params[:image])
+    # if @post.valid? then (@post.save; redirect_to Post.last) end
 
     respond_to do |format|
-      if @post.save
+      if @post.save && @post.valid?
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
