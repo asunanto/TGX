@@ -11,7 +11,10 @@
   	<% end %>
 </p>
 <div>
+  <% if @post.video.attached? %>
   <%= video_tag(url_for(@post.video), style:'width:40%; height:auto', controls: '')%>
+  <% end %>
+</p>
 </div>
 
 <p>
