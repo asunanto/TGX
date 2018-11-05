@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    check_permissions
   end
 
   # POST /posts
@@ -66,6 +67,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    check_permissions
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }

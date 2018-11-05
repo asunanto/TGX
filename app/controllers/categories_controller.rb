@@ -14,11 +14,14 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
+    authorization_check
     @category = Category.new
+  
   end
 
   # GET /categories/1/edit
   def edit
+    authorization_check
   end
 
   # POST /categories
@@ -67,6 +70,15 @@ class CategoriesController < ApplicationController
     def set_category
       @category = Category.find(params[:id])
     end
+
+    def authorization_check
+      if current_user.has_role? :admin 
+      else 
+        flash[:notice] = "You are not authorised! to perform this action"
+        redirect_to categories_path
+      end
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
