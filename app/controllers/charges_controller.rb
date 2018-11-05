@@ -20,7 +20,7 @@ class ChargesController < ApplicationController
     :currency    => 'aud'
     
     )
-    flash[:notice] = "Thank you for your purchase of #{@post.product_name} your account has been billed A$ #{@post.price} "
+    flash[:notice] = "Thank you for your purchase of #{@post.product_name} your account has been billed $ #{@post.price} aud"
     redirect_to posts_path
     @post.destroy
 
