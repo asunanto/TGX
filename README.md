@@ -1,12 +1,13 @@
     Rails project
     1. What is the need (i.e. challenge) that you will be addressing in your project?
-       As games these days can be quite expensive(especially nintendo switch games), people on a strict budget(such as students) might consider to go on a budget and buy second hand games for a cheaper price.
+    there are currently many marketplaces like gumtree and ebay where user can list a whole variety of items, these platforms can be hard to navigate for specfic products due to the sheer volume of other products listed everyday and taking into account human error when creating listings it is common place to find to items listed in the wrong categories. Our Project is aimed to words solving this issue by creating a niche market place in this case we will be making a video game market place. Using our marketplace customers will be able to buy, trade and sell videogames, buying new video games are expensive investments our market place address this issue by allowing users to swap or sell their game to other users enabling everyone to play games they have been looking for at much cheaper prices or buy swapping for another game that they have already completed.
        
     2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
        There are online services such as gumtree that caters to these needs. However, they do not have game trades as a focus. To address this niche area of the market, we would be providing a platform and service where we users can buy and sell games online
        
     3. Describe the project will you be conducting and how. your App will address the needs.
-       Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. 
+    
+       Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. we are including  a comment section on the posts so that potential buyers can negotiate with the sellers for lower prices or trade offers rather then just paying an asking price.
        
     4. Describe the network infrastructure the App may be based on.
        The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
@@ -35,9 +36,11 @@
        - handles payments in rails securely 
        
     6. Identify the database to be used in your App and provide a justification for your choice.
-       We have decided on Postgres as mentioned from question 5
+
+       We have decided on Postgres as it is the database that we are most familiar with, Its setup is easy and navigation of the the database is nice and simple to use.
 
     7. Identify and describe the production database setup (i.e. postgres instance).
+    Heroku host the postgres database for our project, our database is made up of tables which are: posts, comments, users and categories.
 
 
     8. Describe the architecture of your App.
@@ -45,13 +48,14 @@
         Using MVC-- google MVC rails
 
     9. Explain the different high-level components (abstractions) in your App.
+    
 
     10. Detail any third party services that your App will use.
     stripe, heroku, cloudinary, git hub, postgres (refer to question 5)
 
     11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
-    It is similar to twitter.
+    It is similar to twitter
 
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 
@@ -103,6 +107,8 @@
     16. Provide Wireframes for your App.
 
     17. Describe the way tasks are allocated and tracked in your project.
+
+        Throughout this task we are using a combination of trello, discord and slack to track what each memeber of the team is working on. Trello is used to assign cards to teams members and track what features have been completed or in progress. We use discord and slack to communicate with eachother in regards to what parts of the projects we are working and to assist eachother if needed.
         trello  https://trello.com/b/dRldFKvs
 
     18. Discuss how Agile methodology is being implemented in your project.
