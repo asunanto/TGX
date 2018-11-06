@@ -77,3 +77,9 @@ gem "activestorage-cloudinary-service", "~> 0.2.0"
 
 gem "image_processing", "~> 1.7"
 
+
+gem "bootstrap", "~> 4.1.3"
+
+gem "jquery-rails", "~> 4.3"
+
+
