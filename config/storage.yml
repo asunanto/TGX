@@ -35,6 +35,6 @@ local:
 
 cloudinary:
   service: Cloudinary
-  cloud_name: dktjetfrm
+  cloud_name: <%= ENV['CLOUD_NAME'] %>
   api_key: <%= ENV['API_KEY'] %>
   api_secret: <%= ENV['API_SECRET'] %>

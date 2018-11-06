@@ -5,7 +5,7 @@ class Post < ApplicationRecord
     belongs_to :category, optional: true  
     has_one_attached :video
   
-    validates :price, numericality: { only_integer: true }
+    validates :price, numericality: { greater_than_or_equal_to: 0 }
     validates :location,:product_name, presence: true
     validates :sold, :flagged, inclusion: { in: [true, false] }
    

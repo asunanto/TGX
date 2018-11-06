@@ -83,12 +83,13 @@ RSpec.describe PostsController, type: :controller do
     let(:invalid_attributes) {
       {
         product_name:'', 
-        price: 0,
+        price: -10,
         location:'',
         sold: nil,
         flagged: nil,
         #must be a valid attribute or else the program will redirect to sign in page
-        user_id: user 
+        user_id: user, 
+        category_id: categories
       }
     }
     
@@ -139,7 +140,7 @@ RSpec.describe PostsController, type: :controller do
         
         it "redirects to the created post" do
           post :create, params: {post: valid_attributes}, session: valid_session
-          expect(response).to be_successful #redirect_to(Post.last)
+          expect(response).to redirect_to(Post.last)
         end
       end
       
