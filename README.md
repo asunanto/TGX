@@ -13,6 +13,7 @@
        The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
 
        mvc, rails architecture?
+
        
     5. Identify and describe the software to be used in your App.
        Postgres 
@@ -46,15 +47,15 @@
     8. Describe the architecture of your App.
     # write later
         Using MVC-- google MVC rails
-
+Mitch
     9. Explain the different high-level components (abstractions) in your App.
     
 
     10. Detail any third party services that your App will use.
-    stripe, heroku, cloudinary, git hub, postgres (refer to question 5)
-
+    stripe, heroku, cloudinary, git hub, postgres,bootstrap (refer to question 5)
+Bo
     11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-
+mitch
     It is similar to twitter
 
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
@@ -105,7 +106,7 @@
     - Delete users who are abusing the service (blocking considered)
 
     16. Provide Wireframes for your App.
-
+skye
     17. Describe the way tasks are allocated and tracked in your project.
 
         Throughout this task we are using a combination of trello, discord and slack to track what each memeber of the team is working on. Trello is used to assign cards to teams members and track what features have been completed or in progress. We use discord and slack to communicate with eachother in regards to what parts of the projects we are working and to assist eachother if needed.
@@ -118,11 +119,11 @@
         Our team agreed on a fork workflow and Bo to the repo manager. Our team members will each be assigned to an individual task. Once they have completed their tasks, they will raise a pull request on their own branch. Bo, along with his other collegues will do a code review before merging it to master
 
     20. Provide an overview and description of your Testing process.
-
+Bo
     21. Discuss and analyse requirements related to information system security.
-
+Mitch
     22. Discuss methods you will use to protect information and data.
-    
+Mitch
     23. Research what your legal obligations are in relation to handling user data.
-
+Mitch
 
