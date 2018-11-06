@@ -10,9 +10,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-          session[:post_id] = params[:id]
+      session[:post_id] = params[:id]
       @post = Post.find(params[:id])
-       @comments = @post.comments.all.order(created_at: :desc)
+      @comments = @post.comments.all.order(created_at: :desc)
     
   end
 
@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    check_permissions
   end
 
   # POST /posts
@@ -84,7 +85,7 @@ class PostsController < ApplicationController
 
     def check_permissions
       if !@post.can_change?(current_user)
-        redirect_to(request.referrer || root_path, :alert => "You are not authorized to perform that action!")
+        redirect_to(request.referrer || @post, :alert => "You are not authorized to perform that action!")
       end
     end
 end
