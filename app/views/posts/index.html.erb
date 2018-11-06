@@ -1,6 +1,10 @@
 <%# <p id="notice"><%= notice %>
 <h1>Posts</h1>
- 
+<%= form_tag posts_path, method: :get do %>
+  Product name <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+<%= link_to 'Show by Categories', categories_path %>
 <table>
   <thead>
     <tr>
@@ -44,5 +48,5 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
-<%= link_to 'Show by Categories', categories_path %>
+
 
