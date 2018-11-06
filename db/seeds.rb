@@ -24,6 +24,6 @@ Category.create([
     },
 
     {
-        brand: 'retro'
+        brand: 'Retro'
     },
 ])
