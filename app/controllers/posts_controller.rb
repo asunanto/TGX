@@ -13,13 +13,14 @@ class PostsController < ApplicationController
       session[:post_id] = params[:id]
       @post = Post.find(params[:id])
       @comments = @post.comments.all.order(created_at: :desc)
+      
     
   end
 
   # GET /posts/new
   def new
     @post = Post.new
-     @post.category_id = params[:category_id] || 1
+    @post.category_id = params[:category_id] || 1
   end
 
   # GET /posts/1/edit
