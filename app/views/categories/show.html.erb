@@ -1,6 +1,10 @@
-<%# <p id="notice"><%= notice %>
-<h1>Posts</h1>
- 
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @category.brand %>
+</p>
+
 <table>
   <thead>
     <tr>
@@ -17,10 +21,10 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.product_name %></td>
-        <td><%= number_to_currency(post.price) %></td>
+     <% @category.posts.each do |post| %>
+  <tr>
+     <td><%= post.product_name %></td>
+      <td>$<%= post.price %></td>
         <td>
           <% if post.image.attached? %>
         	<%= cl_image_tag(post.image.key, :width=>100, :crop=>"fit") %>
@@ -32,17 +36,11 @@
         <td><%= post.sold %></td>
         <td><%= post.flagged %></td>
         <td><%= link_to 'Show', post %></td>
-        <% if post.can_change?(current_user) %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>  
-      </tr>
-    <% end %>
-  </tbody>
+  </tr>
+     <% end %>
+   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Post', new_post_path %>
-<%= link_to 'Show by Categories', categories_path %>
-
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
