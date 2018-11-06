@@ -7,6 +7,13 @@ class Post < ApplicationRecord
     #resourcify
     validates :product_name, :price, :location, :description, :presence => true
 
+    def self.search(search)
+        if search
+            where(["product_name LIKE ?","#{search}"])
+        else
+            all
+        end
+    end
   
     def price_in_cents
         (price.round(2) * 100).to_i
