@@ -30,8 +30,8 @@ RSpec.describe PostsController, type: :controller do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
   let(:user){
-      @user = User.create!(
-      id: 1,
+    user = User.create!(
+      
       email: 'foo@bar.com',
       password: '123456',
       username: 'foo',
@@ -40,8 +40,31 @@ RSpec.describe PostsController, type: :controller do
       postcode: 1234,
       phone: '0404040404'
       )
-      sign_in @user
-
+      sign_in user
+      
+    }
+    let(:categories) {
+      categories = Category.create!([
+        {
+          brand: 'Playstation'
+        },
+        
+        {
+          brand: 'Nintendo'
+        },
+        
+        {
+          brand: 'Xbox'
+        },
+        
+        {
+          brand: 'PC'
+        },
+        
+        {
+          brand: 'Retro'
+        }
+      ])
     }
     let(:valid_attributes) {
       {
@@ -51,7 +74,8 @@ RSpec.describe PostsController, type: :controller do
         description:'Open for nego',
         sold:false,
         flagged:false,
-        user_id: user
+        user_id: user,
+        category_id: categories
       }
     }
     
@@ -61,7 +85,6 @@ RSpec.describe PostsController, type: :controller do
         product_name:'', 
         price: 0,
         location:'',
-        description:'',
         sold: nil,
         flagged: nil,
         #must be a valid attribute or else the program will redirect to sign in page
