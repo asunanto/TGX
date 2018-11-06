@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-      session[:post_id] = params[:id]
+        session[:post_id] = params[:id]
       @post = Post.find(params[:id])
       @comments = @post.comments.all.order(created_at: :desc)
       
