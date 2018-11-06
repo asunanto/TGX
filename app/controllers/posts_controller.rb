@@ -4,26 +4,28 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-  end
+    @posts = Post.search(params[:search])
+  end 
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-          session[:post_id] = params[:id]
+      session[:post_id] = params[:id]
       @post = Post.find(params[:id])
-       @comments = @post.comments.all.order(created_at: :desc)
+      @comments = @post.comments.all.order(created_at: :desc)
+      
     
   end
 
   # GET /posts/new
   def new
     @post = Post.new
-     @post.category_id = params[:category_id] || 1
+    @post.category_id = params[:category_id] || 1
   end
 
   # GET /posts/1/edit
   def edit
+    check_permissions
   end
 
   # POST /posts
@@ -35,11 +37,9 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.sold = false
     @post.flagged = false
-    @post.save 
-    
 
     respond_to do |format|
-      if @post.save
+      if @post.save && @post.valid?
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -66,6 +66,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    check_permissions
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -86,7 +87,7 @@ class PostsController < ApplicationController
 
     def check_permissions
       if !@post.can_change?(current_user)
-        redirect_to(request.referrer || root_path, :alert => "You are not authorized to perform that action!")
+        redirect_to(request.referrer || @post, :alert => "You are not authorized to perform that action!")
       end
     end
 end
