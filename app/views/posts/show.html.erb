@@ -82,7 +82,7 @@
   <div class="media-body">
     <h4 class="media-heading"><%= comment.user.username %>  commented:</h4>
     <%= time_ago_in_words(comment.created_at)+" ago" %><br>
-    <div style="width:300px;overflow-wrap:break-word;">
+    <div style="width:400px;overflow-wrap:break-word;">
     <%= comment.content %>
     <% if comment.user == current_user || current_user.has_role?(:admin) %>
       <%= link_to 'Edit', edit_comment_path(comment) %> 
