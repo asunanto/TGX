@@ -18,7 +18,7 @@ Tech stack (e.g. html, css, deployment platform, etc)
 Instructions on how to setup, configure and use your App.
 Assuming that you are forking it from the github repo
 1) set postgres username at database.yml file
-2) create a .env file with the following variables; you can use my details if you like
+2) create a .env file with the following variables;
 #postgres
 DB_PASSWORD=
 #cloudinary
@@ -39,9 +39,41 @@ you can follow these steps
 Design documentation including,
 
 Design process
+1) we first touched on user stories to get an idea how a user will use app
+2) Then we touched on models that is required from the app based on our user stories
+3) when we have our models we then decide on the fields we want for our user
+4) From our models, we can now create an entity relationship diagram to establish connections with each of our models.
+5) Then we first worked on program backbone together as a team. 
+6) Once the program backbone is established we can then, work individually to work on features of our program 
 
 User stories
-A workflow diagram of the user journey/s
+User
+Buy
+- access an item with a list of games
+- make comments on the item
+- purchase on item
+- add it to the cart (optional)
+- can see if the item is sold
+
+Sell
+- upload image of the item selling
+- remove items they are selling
+- can relist the item as sold
+- can pick a category for item (drop down box)
+- add description and price
+- seller can CRUD their own post
+- selling options – delivery / pick up
+- contact details – suburb and email
+
+As anonymous,
+- must register an account
+- Only View home page
+
+Admin
+- admin can remove and update every post (admin have the abillty to update fields of the items)
+- Delete users who are abusing the service (blocking considered)
+
+A workflow diagram of the user journey/s.
 Wireframes
 Database Entity Relationship Diagrams
 Details of planning process including,
@@ -57,9 +89,12 @@ Screenshots of Trello board(s)
     
        Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. we are including  a comment section on the posts so that potential buyers can negotiate with the sellers for lower prices or trade offers rather then just paying an asking price.
        
-    4. Describe the network infrastructure the App may be based on.
+  Skye  4. Describe the network infrastructure the App may be based on.
        The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
-    
+
+       mvc, rails architecture?
+       https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84
+
        
     5. Identify and describe the software to be used in your App.
        Postgres 
@@ -89,19 +124,25 @@ Screenshots of Trello board(s)
     7. Identify and describe the production database setup (i.e. postgres instance).
     Heroku host the postgres database for our project, our database is made up of tables which are: posts, comments, users and categories.
 
-
+Bo
     8. Describe the architecture of your App.
-    # write later
-        Using MVC-- google MVC rails
-Mitch
+    Our app architecture is based on MVC. The model contains abstractions in our app where we can maintain relationships between object and database and handles validations and transactions. 
+    The view handles the presentation of data in a particular format which is triggered by the controller decision to present the data.The controller takes care of the flow: uses models to do queries, parses data, make decisions in which format it should present the data.
+
+Bo
     9. Explain the different high-level components (abstractions) in your App.
-    
+    Our app consists of components which include Post, Comment, User and Category.
+    - User holds details for users which consists attributes such as username, password,
+    email, phone number etc
+    - Post holds attributes such as title, description, image, video as well as other attributes from the model User and Categories
+    - Comment holds attributes for content and flagged as well as attributes from User and Post
+    - Category contains only brand as an attribute, this gets populated with seed file in our initial setup so that the when the user creates a new post they could access the drop down box under categories
 
     10. Detail any third party services that your App will use.
     stripe, heroku, cloudinary, git hub, postgres,bootstrap (refer to question 5)
-Bo
+thanh
     11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-mitch
+Bo
     It is similar to twitter
 
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
@@ -122,8 +163,7 @@ mitch
 
 
     14. Provide your database schema design.
-    *screenshot schema.rb
-
+    *erd
     15. Provide User stories for your App.
     User
     Buy
