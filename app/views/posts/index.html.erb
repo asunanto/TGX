@@ -1,8 +1,4 @@
 
-
-
-<a href="/posts/new"><button>New Post</button></a>
- 
  <div class= "container-fluid">
 <%= form_tag posts_path, method: :get do %>
   Product name <%= text_field_tag :search, params[:search] %>

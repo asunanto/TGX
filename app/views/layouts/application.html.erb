@@ -16,23 +16,36 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav nav-tabs">
-      <li class="nav-item active">
-        <%= link_to 'Home', root_path%></p>
+    <ul class="navbar-nav mr-auto">
+      <li >
+        <a class="nav-link" href="/posts" role="button" aria-haspopup="true" aria-expanded="false">Home<span class="sr-only">(current)</span></a>
       </li>
       <br>
-      <li class="navItem">
-          <%= link_to 'Categories', categories_path %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/categories/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/categories/1">Playstation</a>
+          <a class="dropdown-item" href="/categories/2">Nintendo</a>
+          <a class="dropdown-item" href="/categories/3">Xbox</a>
+          <a class="dropdown-item" href="/categories/4">PC</a>
+          <a class="dropdown-item" href="/categories/5">Retro</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="/posts/new" role="button" aria-haspopup="true" aria-expanded="false">New Post<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
-  
+  <div class="col-xs-1" align="center">
   <% if user_signed_in? %>
-      <h6 style="color:white;">Logged in as <%= current_user.email %> </h6>
+      <h6 style="color:white;">Logged in as <%= current_user.username %> </h6>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Login or Sign Up', new_user_session_path %>
     <% end %>
+    </div>
 </nav>
 
   <body>
