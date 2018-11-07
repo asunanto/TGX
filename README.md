@@ -79,7 +79,7 @@ Screenshots of Trello board(s)
        Heroku
        - deploys apps online for users
        Cloudinary
-       - image storage cloud service 
+       - image and video storage cloud service 
        Stripe
        - handles payments in rails securely 
        
@@ -132,25 +132,27 @@ mitch
     - make comments on the item
     - purchase on item
     - add it to the cart (optional)
-    - can see if the item is sold
+    - can see if the item is sold (optional)
+    - buyer can purchase their own games but can buy others
 
     Sell
-    - upload image of the item selling
+    - upload image and video of the item selling
     - remove items they are selling
-    - can relist the item as sold
+    - can relist the item as sold (optional)
     - can pick a category for item (drop down box)
     - add description and price
     - seller can CRUD their own post
-    - selling options – delivery / pick up
-    - contact details – suburb and email
+    - selling options – delivery / pick up (optional)
+    - contact details – location and email
 
     As anonymous,
     - must register an account
-    - Only View home page
+
 
     Admin
     - admin can remove and update every post (admin have the abillty to update fields of the items)
     - Delete users who are abusing the service (blocking considered)
+    - cannot buy their own games but can purchase others.
 
     16. Provide Wireframes for your App.
 skye
