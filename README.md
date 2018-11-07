@@ -211,8 +211,6 @@ skye
 
         In addition We have included some tests for rspecs for the controllers and models. Our models can be tested by passing in each fields in the model and comparing each fields with their expected outcome. Controllers can be tested by passing in valid parameters and invalid parameters and comparing them with an expected outcome. Depending on the methods we can check whether the program have successfully loaded a page or redirected to a path. 
 
-
-
     21. Discuss and analyse requirements related to information system security.
         all user data must be encrypted and nobody is allowed accses to the encrypted data even the admins to protects our users information. all online payment methods are to be handled by stripe which is secure. It is also our responsibilty to make our customers aware not to share their login details with anyone.
 Mitch
