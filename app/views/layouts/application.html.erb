@@ -9,15 +9,50 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      <h4>Logged in as <%= current_user.email %> </h4>
-      <p> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h1 style="color:white;"> TGX </h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li >
+        <a class="nav-link" href="/posts" role="button" aria-haspopup="true" aria-expanded="false">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <br>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/categories/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/categories/1">Playstation</a>
+          <a class="dropdown-item" href="/categories/2">Nintendo</a>
+          <a class="dropdown-item" href="/categories/3">Xbox</a>
+          <a class="dropdown-item" href="/categories/4">PC</a>
+          <a class="dropdown-item" href="/categories/5">Retro</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="/posts/new" role="button" aria-haspopup="true" aria-expanded="false"><button class="btn-success">New Post</button><span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-1" align="center">
+  <% if user_signed_in? %>
+      <h6 style="color:white;">Logged in as <%= current_user.username %> </h6>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Login or Sign Up', new_user_session_path %>
     <% end %>
+    </div>
+</nav>
+
+  <body>
+    <div class="col-xs-1" align="center">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+    </div>
   </body>
 </html>
