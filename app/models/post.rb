@@ -6,8 +6,6 @@ class Post < ApplicationRecord
     has_one_attached :video
 
     #resourcify
-    validates :product_name, :price, :location, :description, :presence => true
-
     def self.search(search)
         if search
             where(["product_name ILIKE ?","#{search}"])
