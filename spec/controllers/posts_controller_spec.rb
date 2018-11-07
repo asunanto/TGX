@@ -126,7 +126,7 @@ RSpec.describe PostsController, type: :controller do
       it "returns a success response" do
         post = Post.create! valid_attributes
         get :edit, params: {id: post.to_param}, session: valid_session
-        expect(response).to be_successful
+        expect(response).to redirect_to(post)
       end
     end
     

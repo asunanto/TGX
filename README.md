@@ -1,4 +1,32 @@
-    Rails project
+Rails project
+A link (URL) to your published App
+https://glacial-sea-56829.herokuapp.com/
+A link to your GitHub repository
+https://github.com/asunanto/TGX
+
+Description of your project, including,
+
+Problem definition / purpose
+
+Functionality / features
+Screenshots
+Tech stack (e.g. html, css, deployment platform, etc)
+- html/css
+- heroku
+- ruby on rails
+
+Instructions on how to setup, configure and use your App.
+- 
+Design documentation including,
+
+Design process
+User stories
+A workflow diagram of the user journey/s.
+Wireframes
+Database Entity Relationship Diagrams
+Details of planning process including,
+Project plan & timeline
+Screenshots of Trello board(s)
     1. What is the need (i.e. challenge) that you will be addressing in your project?
     there are currently many marketplaces like gumtree and ebay where user can list a whole variety of items, these platforms can be hard to navigate for specfic products due to the sheer volume of other products listed everyday and taking into account human error when creating listings it is common place to find to items listed in the wrong categories. Our Project is aimed to words solving this issue by creating a niche market place in this case we will be making a video game market place. Using our marketplace customers will be able to buy, trade and sell videogames, buying new video games are expensive investments our market place address this issue by allowing users to swap or sell their game to other users enabling everyone to play games they have been looking for at much cheaper prices or buy swapping for another game that they have already completed.
        
@@ -116,10 +144,15 @@ skye
         Our team have agreed on a stand up meeting at 10am every morning. we tracked everyone's progress and address our    issues during the meeting. if there is any problems and the task is of a high priority, we can have more of our members working on it.
 
     19. Provide an overview and description of your Source control process.
-        Our team agreed on a fork workflow and Bo to the repo manager. Our team members will each be assigned to an individual task. Once they have completed their tasks, they will raise a pull request on their own branch. Bo, along with his other collegues will do a code review before merging it to master
+        Our team agreed on a fork workflow and Bo to be the repo manager. Our team members will each be assigned to an individual task. Once they have completed their tasks, they will raise a pull request on their own branch. Bo, along with his other collegues will do a code review before merging it to master
 
     20. Provide an overview and description of your Testing process.
-Bo
+        Our approach is to get our latest app deployed to heroku so that our team can test it live. if any bug was found each team member can raise a pull request on repo manager's master. The code will be reviewed and merged.
+
+        In addition We have included some tests for rspecs for the controllers and models. Our models can be tested by passing in each fields in the model and comparing each fields with their expected outcome. Controllers can be tested by passing in valid parameters and invalid parameters and comparing them with an expected outcome. Depending on the methods we can check whether the program have successfully loaded a page or redirected to a path. 
+
+
+
     21. Discuss and analyse requirements related to information system security.
 Mitch
     22. Discuss methods you will use to protect information and data.
