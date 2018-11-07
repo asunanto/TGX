@@ -20,24 +20,22 @@ Assuming that you are forking it from the github repo
 1) set postgres username at database.yml file
 2) create a .env file with the following variables; you can use my details if you like
 #postgres
-DB_PASSWORD=postgres
+DB_PASSWORD=
 #cloudinary
-CLOUD_NAME=dktjetfrm
-API_KEY=416546619833917
-API_SECRET=5KrubEa89jbg4wgQ6W4jq6GuYt4
+CLOUD_NAME=
+API_KEY=
+API_SECRET=
 #stripe
-PUBLISHABLE_KEY=pk_test_scFrJ0MoJBC2irMkB9qMM40A
-SECRET_KEY=sk_test_mLvgG25551AGTAYi7MJJHM5S
+PUBLISHABLE_KEY=
+SECRET_KEY=
 3) then do a db:setup, then db:seed if you are using an empty database
 
 By default the app creates a basic user, if you want to add an admin
 you can follow these steps
 1) register a user on the app
-2)
+2) in your cmd, do a rails c
+3) In console,to assign role to admin for the first user u can type User.first.add_role :admin
 
-
-
-- 
 Design documentation including,
 
 Design process
