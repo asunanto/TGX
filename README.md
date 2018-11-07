@@ -39,8 +39,9 @@ you can follow these steps
 Design documentation including,
 
 Design process
+
 User stories
-A workflow diagram of the user journey/s.
+A workflow diagram of the user journey/s
 Wireframes
 Database Entity Relationship Diagrams
 Details of planning process including,
@@ -58,9 +59,7 @@ Screenshots of Trello board(s)
        
     4. Describe the network infrastructure the App may be based on.
        The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
-
-       mvc, rails architecture?
-
+    
        
     5. Identify and describe the software to be used in your App.
        Postgres 
