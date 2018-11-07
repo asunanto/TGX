@@ -16,13 +16,25 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav nav-tabs">
-      <li class="nav-item active">
-        <%= link_to 'Home', root_path%></p>
+    <ul class="navbar-nav mr-auto">
+      <li >
+        <a class="nav-link" href="/posts" role="button" aria-haspopup="true" aria-expanded="false">Home<span class="sr-only">(current)</span></a>
       </li>
       <br>
-      <li class="navItem">
-          <%= link_to 'Categories', categories_path %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/categories/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/categories/1">Playstation</a>
+          <a class="dropdown-item" href="/categories/2">Nintendo</a>
+          <a class="dropdown-item" href="/categories/3">Xbox</a>
+          <a class="dropdown-item" href="/categories/4">PC</a>
+          <a class="dropdown-item" href="/categories/5">Retro</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="/posts/new" role="button" aria-haspopup="true" aria-expanded="false">New Post<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
