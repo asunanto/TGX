@@ -14,7 +14,7 @@ class Post < ApplicationRecord
         end
     end
   
-    validates :price, numericality: { greater_than_or_equal_to: 0 }
+    validates :price, numericality: { greater_than_or_equal_to: 0.5 }
     validates :location,:product_name, presence: true
     validates :sold, :flagged, inclusion: { in: [true, false] }
    
