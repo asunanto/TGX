@@ -83,3 +83,5 @@ gem "bootstrap", "~> 4.1.3"
 gem "jquery-rails", "~> 4.3"
 
 
+
+gem "rails_emoji_picker", "~> 0.1.5"
