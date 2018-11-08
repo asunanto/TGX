@@ -90,7 +90,7 @@ Screenshots of Trello board(s)
        Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. we are including  a comment section on the posts so that potential buyers can negotiate with the sellers for lower prices or trade offers rather then just paying an asking price.
        
   Skye  4. Describe the network infrastructure the App may be based on.
-       The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
+        When the user sends a HTTP/s packet request to the heroku server for our website, the website checks that packet for the destination MAC and IP address of the previous hop, and sends back a handshake packet to the user. once the handshake has been accepted between the server and the user computer. The server can start sending packets that contain header and data of the website. after the website has been fully rendered onto the user's computer. when a user has made a selection. that selection will be sent and compaired to expected selections, and the server then makes a handshake agreement to the user's computer to render the new page. if invalid data is sent or expected from the user. An error will be brought up and prevent the user from proceeding till the invalid data is corrected and then the user can proceed.
 
        mvc, rails architecture?
        https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84
@@ -194,7 +194,7 @@ Bo
     - cannot buy their own games but can purchase others.
 
     16. Provide Wireframes for your App.
-skye
+Skye
     17. Describe the way tasks are allocated and tracked in your project.
 
         Throughout this task we are using a combination of trello, discord and slack to track what each memeber of the team is working on. Trello is used to assign cards to teams members and track what features have been completed or in progress. We use discord and slack to communicate with eachother in regards to what parts of the projects we are working and to assist eachother if needed.
