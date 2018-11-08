@@ -18,7 +18,7 @@ Tech stack (e.g. html, css, deployment platform, etc)
 Instructions on how to setup, configure and use your App.
 Assuming that you are forking it from the github repo
 1) set postgres username at database.yml file
-2) create a .env file with the following variables; you can use my details if you like
+2) create a .env file with the following variables;
 #postgres
 DB_PASSWORD=
 #cloudinary
@@ -39,9 +39,41 @@ you can follow these steps
 Design documentation including,
 
 Design process
+1) we first touched on user stories to get an idea how a user will use app
+2) Then we touched on models that is required from the app based on our user stories
+3) when we have our models we then decide on the fields we want for our user
+4) From our models, we can now create an entity relationship diagram to establish connections with each of our models.
+5) Then we first worked on program backbone together as a team. 
+6) Once the program backbone is established we can then, work individually to work on features of our program 
 
 User stories
-A workflow diagram of the user journey/s
+User
+Buy
+- access an item with a list of games
+- make comments on the item
+- purchase on item
+- add it to the cart (optional)
+- can see if the item is sold
+
+Sell
+- upload image of the item selling
+- remove items they are selling
+- can relist the item as sold
+- can pick a category for item (drop down box)
+- add description and price
+- seller can CRUD their own post
+- selling options – delivery / pick up
+- contact details – suburb and email
+
+As anonymous,
+- must register an account
+- Only View home page
+
+Admin
+- admin can remove and update every post (admin have the abillty to update fields of the items)
+- Delete users who are abusing the service (blocking considered)
+
+A workflow diagram of the user journey/s.
 Wireframes
 Database Entity Relationship Diagrams
 Details of planning process including,
@@ -57,9 +89,12 @@ Screenshots of Trello board(s)
     
        Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. we are including  a comment section on the posts so that potential buyers can negotiate with the sellers for lower prices or trade offers rather then just paying an asking price.
        
-    4. Describe the network infrastructure the App may be based on.
+  Skye  4. Describe the network infrastructure the App may be based on.
        The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
-    
+
+       mvc, rails architecture?
+       https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84
+
        
     5. Identify and describe the software to be used in your App.
        Postgres 
@@ -89,19 +124,25 @@ Screenshots of Trello board(s)
     7. Identify and describe the production database setup (i.e. postgres instance).
     Heroku host the postgres database for our project, our database is made up of tables which are: posts, comments, users and categories.
 
-
+Bo
     8. Describe the architecture of your App.
-    # write later
-        Using MVC-- google MVC rails
-Mitch
+    Our app architecture is based on MVC. The model contains abstractions in our app where we can maintain relationships between object and database and handles validations and transactions. 
+    The view handles the presentation of data in a particular format which is triggered by the controller decision to present the data.The controller takes care of the flow: uses models to do queries, parses data, make decisions in which format it should present the data.
+
+Bo
     9. Explain the different high-level components (abstractions) in your App.
-    
+    Our app consists of components which include Post, Comment, User and Category.
+    - User holds details for users which consists attributes such as username, password,
+    email, phone number etc
+    - Post holds attributes such as title, description, image, video as well as other attributes from the model User and Categories
+    - Comment holds attributes for content and flagged as well as attributes from User and Post
+    - Category contains only brand as an attribute, this gets populated with seed file in our initial setup so that the when the user creates a new post they could access the drop down box under categories
 
     10. Detail any third party services that your App will use.
     stripe, heroku, cloudinary, git hub, postgres,bootstrap (refer to question 5)
-Bo
+thanh
     11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-mitch
+Bo
     It is similar to twitter
 
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
@@ -122,8 +163,7 @@ mitch
 
 
     14. Provide your database schema design.
-    *screenshot schema.rb
-
+    *erd
     15. Provide User stories for your App.
     User
     Buy
@@ -171,33 +211,19 @@ skye
 
         In addition We have included some tests for rspecs for the controllers and models. Our models can be tested by passing in each fields in the model and comparing each fields with their expected outcome. Controllers can be tested by passing in valid parameters and invalid parameters and comparing them with an expected outcome. Depending on the methods we can check whether the program have successfully loaded a page or redirected to a path. 
 
-
-
     21. Discuss and analyse requirements related to information system security.
-        all user data must be encrypted and nobody is allowed accses to the encrypted data even the admins to protects our users information. all online payment methods are to be handled by stripe which is secure. It is also our responsibilty to make our customers aware not to share their login details with anyone.
+    
+        all user data must be encrypted and nobody is allowed accses to the encrypted data even the admins to protects our users information. all online payment methods are to be handled by stripe which is secure. It is also our responsibilty to make our customers aware not to share their login details with anyone. we also must make sure all of users data is erased if there is a breach or in if they leave the service.
 Mitch
     22. Discuss methods you will use to protect information and data.
-     throughout this project the team wil take security precautions by using devise to encrypt the users data and stipe which automaticaly encrypts users payments details. we will also use authorization so that only admin as accsess to private user data however even the admins will not be able to view the ecypted data. we also prompt users when they are creating an account to use secure passwords which is atleast 6 calendars long have one capital letter/symbol and numbers.
+
+     throughout this project the team wil take security precautions by using devise to encrypt the users data and stipe which automaticaly encrypts users payments details. we will also use authorization so that only admin as accsess to private user data however even the admins will not be able to view the ecypted data. we also prompt users when they are creating an account to use secure passwords which is atleast 6 characters long have one capital letter/symbol and numbers.
+
+     
 Mitch
     23. Research what your legal obligations are in relation to handling user data.
       As the creators of the app it is our responsibility to
-      Protect personal information from:theft, misuse, interference, loss, unauthorised access, modification, disclosure and Take reasonable steps to destroy or de-identify personal information when it is no longer needed for any purpose permitted under the Privacy Act 1988. This might include shredding documents or storing them in a secure area.You must implement practices, procedures and systems to ensure compliance with the APPs and to handle complaints.
-      You must make available an up-to-date and clear privacy policy, setting out certain information on how you will manage personal information.
-      You must take reasonable steps to protect the personal information collected or held.
-      You must take reasonable steps to ensure that personal information collected is accurate, complete and up to date.
-      You must give individuals access to their personal information on request.
-      You must correct personal information where you become aware that it is either:
-        inaccurate
-        incomplete
-        out of date
-        irrelevant
-        misleading
-        where requested by the individual.
-      You can only collect personal information if it is necessary for the function or activity of your business.
-      You must de-identify or delete unsolicited personal information as soon as is practical, if it is not necessary for the function or activity of your business.
-      You should not use or disclose personal information for a purpose different from the original purpose of collection, except in limited circumstances.
-      Although you can collect and use personal information, you generally need the individuals consent first.
-       You must not use or disclose personal information for a direct marketing purpose, except in limited circumstances. whats listed above the basic procedures we must follow to protect our users data due to time constraints we will implement as much securtiy measures as we can for our projects although we may not be able to implement all them. However if we were to launch our app officialy we must meet all these requirements before we can launch.
-    
-Mitch
+      Protect personal information from:theft, misuse, interference, loss, unauthorised access, modification, disclosure and Take reasonable steps to destroy or de-identify personal information when it is no longer needed for any purpose permitted under the Privacy Act 1988.
+      we must also make available an up-to-date and clear privacy policy, setting out how we will manage personal information. we are aslo responsible for ensuring that all personal information collected is accurate, complete and up to date. users must have access to their personal information on request. It is our responsiblity to correct personal information if it has be made aware to us that it is either: inaccurate, incomplete, out of date, irrelevant or  misleading. we must delete any personel information that is no longer being used for example if our user request to longer user our service we must wipe their information from our database. we must not use personal information for other any other purposes beside the functionality of our app. before collecting any personal information we must first ask our users and have them agree to the  terms of use. we are not allowed to use our customers data for marketing purposes unless we have their permission and even then we must be carefull in what information is used. whats listed above is the basic procedures we must follow to protect our users data due to time constraints we will implement as much securtiy measures as we can for our projects although we may not be able to implement all them. However if we were to launch our app officialy we must meet all these requirements before we can launch.
+
 
