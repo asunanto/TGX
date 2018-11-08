@@ -14,6 +14,20 @@ There are currently many marketplaces like gumtree and ebay where user can list 
 ### Functionality / features
 
 ### Screenshots
+<p align="center">
+<img src="log_in.png" width="600px" >
+</p>
+<p align="center">
+<img src="sign_up.png" width="600px" >
+</p>
+<p align="center">
+<img src="post_index.png" width="600px" >
+</p>
+<p align="center">
+<img src="new_post.png" width="600px" >
+</p>
+
+
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 - HTML
@@ -103,7 +117,7 @@ Admin
 <img src="sign_up.png" width="300px" height= "500px"  >
 </p>
 <p align="center">
-<img src="new_post.png" width="300px" height="500px" >
+<img src="new_post_w.png" width="300px" height="500px" >
 </p>
 <p align="center">
 <img src="home.png" width="500px" >
