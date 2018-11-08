@@ -97,16 +97,16 @@ Admin
 
 ### Wireframes
 <p align="center">
-<img src="login.png" width="600px" >
+<img src="login.png" width="300px" >
 </p>
 <p align="center">
-<img src="sign_up.png" width="600px" >
+<img src="sign_up.png" width="300px" >
 </p>
 <p align="center">
-<img src="new_post.png" width="600px" >
+<img src="new_post.png" width="300px" >
 </p>
 <p align="center">
-<img src="home.png" width="600px" >
+<img src="home.png" width="300px" >
 </p>
 
 ### Database Entity Relationship Diagrams
@@ -140,27 +140,23 @@ finilising documentation and presentation
 <p align="center">
 <img src="trello.png" width="600px" >
 </p>
+
 ## Answers to the Short Answer questions
 
-1.What is the need (i.e. challenge) that you will be addressing in your project?
+1. What is the need (i.e. challenge) that you will be addressing in your project?
 
 Refer to Problem definition / purpose
        
-2.Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
 There are online services such as gumtree that caters to these needs. However, they do not have game trades as a focus. To address this niche area of the market, we would be providing a platform and service where we users can buy and sell games online
        
-3.Describe the project will you be conducting and how your app will address the needs.
+3. Describe the project will you be conducting and how your app will address the needs.
     
 Our project aims to create a platform where users can post games they would like to sell as well as buying games from the post listed. we are including  a comment section on the posts so that potential buyers can negotiate with the sellers for lower prices or trade offers rather then just paying an asking price.
-       
-4.Describe the network infrastructure the App may be based on.
 
-The infrastructure of the app would be similar to facebook/twitter marketplace. The user creates post and other users can comment on it and make purchases from the post. 
-
-mvc, rails architecture?
-https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84
-
+4. Describe the network infrastructure the App may be based on.
+When the user sends a HTTP/s packet request to the heroku server for our website, the website checks that packet for the destination MAC and IP address of the previous hop, and sends back a handshake packet to the user. once the handshake has been accepted between the server and the user computer. The server can start sending packets that contain header and data of the website. after the website has been fully rendered onto the user's computer. when a user has made a selection. that selection will be sent and compaired to expected selections, and the server then makes a handshake agreement to the user's computer to render the new page. if invalid data is sent or expected from the user. An error will be brought up and prevent the user from proceeding till the invalid data is corrected and then the user can proceed.
        
 5.Identify and describe the software to be used in your App.
 
@@ -186,9 +182,6 @@ Github
 Heroku
 - deploys apps online for users
 
-4. Describe the network infrastructure the App may be based on.
-When the user sends a HTTP/s packet request to the heroku server for our website, the website checks that packet for the destination MAC and IP address of the previous hop, and sends back a handshake packet to the user. once the handshake has been accepted between the server and the user computer. The server can start sending packets that contain header and data of the website. after the website has been fully rendered onto the user's computer. when a user has made a selection. that selection will be sent and compaired to expected selections, and the server then makes a handshake agreement to the user's computer to render the new page. if invalid data is sent or expected from the user. An error will be brought up and prevent the user from proceeding till the invalid data is corrected and then the user can proceed.
-
 Cloudinary
 
 - image and video storage cloud service 
@@ -197,19 +190,19 @@ Stripe
 
 - handles payments in rails securely 
        
-6.Identify the database to be used in your App and provide a justification for your choice.
+6. Identify the database to be used in your App and provide a justification for your choice.
 
 We have decided on Postgres as it is the database that we are most familiar with, Its setup is easy and navigation of the the database is nice and simple to use.
 
-7.Identify and describe the production database setup (i.e. postgres instance).
+7. Identify and describe the production database setup (i.e. postgres instance).
 
 Heroku host the postgres database for our project, our database is made up of tables which are: posts, comments, users and categories.
 
-8.Describe the architecture of your App.
+8. Describe the architecture of your App.
 
 Our app architecture is based on MVC. The model contains abstractions in our app where we can maintain relationships between object and database and handles validations and transactions. The view handles the presentation of data in a particular format which is triggered by the controller decision to present the data.The controller takes care of the flow: uses models to do queries, parses data, make decisions in which format it should present the data.
 
-9.Explain the different high-level components (abstractions) in your App.
+9. Explain the different high-level components (abstractions) in your App.
 
 Our app consists of components which include Post, Comment, User and Category.
 
