@@ -10,6 +10,7 @@
     <tr>
       <th>Product name</th>
       <th>Price</th>
+      <th>Category</th>
       <th>Image</th>
       <th>User</th>
       <th>Location</th>
@@ -25,6 +26,7 @@
       <tr>
         <td><%= post.product_name %></td>
         <td><%= number_to_currency(post.price) %></td>
+        <td><%= post.category.brand %></td>
         <td>
           <% if post.image.attached? %>
         	<%= cl_image_tag(post.image.key, :width=>100, :crop=>"fit") %>
