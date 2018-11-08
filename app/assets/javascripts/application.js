@@ -19,3 +19,9 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+// = require jquery
+// = require rails_emoji_picker
+// = require_tree .
+// = require turbolinks
+// = require_self
