@@ -175,30 +175,18 @@ skye
 
 
     21. Discuss and analyse requirements related to information system security.
-        all user data must be encrypted and nobody is allowed accses to the encrypted data even the admins to protects our users information. all online payment methods are to be handled by stripe which is secure. It is also our responsibilty to make our customers aware not to share their login details with anyone.
+    
+        all user data must be encrypted and nobody is allowed accses to the encrypted data even the admins to protects our users information. all online payment methods are to be handled by stripe which is secure. It is also our responsibilty to make our customers aware not to share their login details with anyone. we also must make sure all of users data is erased if there is a breach or in if they leave the service.
 Mitch
     22. Discuss methods you will use to protect information and data.
-     throughout this project the team wil take security precautions by using devise to encrypt the users data and stipe which automaticaly encrypts users payments details. we will also use authorization so that only admin as accsess to private user data however even the admins will not be able to view the ecypted data. we also prompt users when they are creating an account to use secure passwords which is atleast 6 calendars long have one capital letter/symbol and numbers.
+
+     throughout this project the team wil take security precautions by using devise to encrypt the users data and stipe which automaticaly encrypts users payments details. we will also use authorization so that only admin as accsess to private user data however even the admins will not be able to view the ecypted data. we also prompt users when they are creating an account to use secure passwords which is atleast 6 characters long have one capital letter/symbol and numbers.
+
+     
 Mitch
     23. Research what your legal obligations are in relation to handling user data.
       As the creators of the app it is our responsibility to
-      Protect personal information from:theft, misuse, interference, loss, unauthorised access, modification, disclosure and Take reasonable steps to destroy or de-identify personal information when it is no longer needed for any purpose permitted under the Privacy Act 1988. This might include shredding documents or storing them in a secure area.You must implement practices, procedures and systems to ensure compliance with the APPs and to handle complaints.
-      You must make available an up-to-date and clear privacy policy, setting out certain information on how you will manage personal information.
-      You must take reasonable steps to protect the personal information collected or held.
-      You must take reasonable steps to ensure that personal information collected is accurate, complete and up to date.
-      You must give individuals access to their personal information on request.
-      You must correct personal information where you become aware that it is either:
-        inaccurate
-        incomplete
-        out of date
-        irrelevant
-        misleading
-        where requested by the individual.
-      You can only collect personal information if it is necessary for the function or activity of your business.
-      You must de-identify or delete unsolicited personal information as soon as is practical, if it is not necessary for the function or activity of your business.
-      You should not use or disclose personal information for a purpose different from the original purpose of collection, except in limited circumstances.
-      Although you can collect and use personal information, you generally need the individuals consent first.
-       You must not use or disclose personal information for a direct marketing purpose, except in limited circumstances. whats listed above the basic procedures we must follow to protect our users data due to time constraints we will implement as much securtiy measures as we can for our projects although we may not be able to implement all them. However if we were to launch our app officialy we must meet all these requirements before we can launch.
-    
-Mitch
+      Protect personal information from:theft, misuse, interference, loss, unauthorised access, modification, disclosure and Take reasonable steps to destroy or de-identify personal information when it is no longer needed for any purpose permitted under the Privacy Act 1988.
+      we must also make available an up-to-date and clear privacy policy, setting out how we will manage personal information. we are aslo responsible for ensuring that all personal information collected is accurate, complete and up to date. users must have access to their personal information on request. It is our responsiblity to correct personal information if it has be made aware to us that it is either: inaccurate, incomplete, out of date, irrelevant or  misleading. we must delete any personel information that is no longer being used for example if our user request to longer user our service we must wipe their information from our database. we must not use personal information for other any other purposes beside the functionality of our app. before collecting any personal information we must first ask our users and have them agree to the  terms of use. we are not allowed to use our customers data for marketing purposes unless we have their permission and even then we must be carefull in what information is used. whats listed above is the basic procedures we must follow to protect our users data due to time constraints we will implement as much securtiy measures as we can for our projects although we may not be able to implement all them. However if we were to launch our app officialy we must meet all these requirements before we can launch.
+
 
