@@ -1,21 +1,21 @@
 # The Games Xchange
 
-###A link (URL) to your published App
+### A link (URL) to your published App
 https://glacial-sea-56829.herokuapp.com/
 
-###A link to your GitHub repository
+### A link to your GitHub repository
 https://github.com/asunanto/TGX
 
-##Description
+## Description
 
-###Problem definition / purpose
+### Problem definition / purpose
 There are currently many marketplaces like gumtree and ebay where user can list a whole variety of items, these platforms can be hard to navigate for specfic products due to the sheer volume of other products listed everyday and taking into account human error when creating listings it is common place to find to items listed in the wrong categories. Our Project is aimed to words solving this issue by creating a niche market place in this case we will be making a video game market place. Using our marketplace customers will be able to buy, trade and sell videogames, buying new video games are expensive investments our market place address this issue by allowing users to swap or sell their game to other users enabling everyone to play games they have been looking for at much cheaper prices or buy swapping for another game that they have already completed.
 
-###Functionality / features
+### Functionality / features
 
-###Screenshots
+### Screenshots
 
-###Tech stack (e.g. html, css, deployment platform, etc)
+### Tech stack (e.g. html, css, deployment platform, etc)
 - HTML
 - CSS
 - Bootstrap
@@ -23,7 +23,7 @@ There are currently many marketplaces like gumtree and ebay where user can list 
 - Ruby on Rails
 - Github
 
-###Instructions on how to setup, configure and use your App.
+### Instructions on how to setup, configure and use your App.
 Assuming that you are forking it from the github repo
 
 1. Set postgres username at database.yml file
@@ -50,9 +50,9 @@ you can follow these steps
 2. In your cmd, do a rails c
 3. In console, to assign role to admin for the first user u can type User.first.add_role :admin
 
-##Design documentation including,
+## Design documentation including,
 
-###Design process
+### Design process
 1. We first touched on user stories to get an idea how a user will use app
 2. Then we touched on models that is required from the app based on our user stories
 3. when we have our models we then decide on the fields we want for our user
@@ -60,7 +60,7 @@ you can follow these steps
 5. Then we first worked on program backbone together as a team. 
 6. Once the program backbone is established we can then, work individually to work on features of our program 
 
-###User stories
+### User stories
 User
 
 Buyer
@@ -90,19 +90,19 @@ Admin
 - Can remove and update every post (admin has the ability to update fields of the posts)
 - Delete users who are abusing the service (blocking considered)
 
-###A workflow diagram of the user journey/s.
+### A workflow diagram of the user journey/s.
 
-###Wireframes
+### Wireframes
 
-###Database Entity Relationship Diagrams
+### Database Entity Relationship Diagrams
 
-##Details of planning process including,
+## Details of planning process including,
 
-###Project plan & timeline
+### Project plan & timeline
 
-###Screenshots of Trello board(s)
+### Screenshots of Trello board(s)
 
-##Answers to the Short Answer questions
+## Answers to the Short Answer questions
 
 1.What is the need (i.e. challenge) that you will be addressing in your project?
 
