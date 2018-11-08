@@ -100,13 +100,13 @@ Admin
 <img src="login.png" width="300px" >
 </p>
 <p align="center">
-<img src="sign_up.png" width="300px" >
+<img src="sign_up.png" width="300px" height= "500px"  >
 </p>
 <p align="center">
-<img src="new_post.png" width="300px" >
+<img src="new_post.png" width="300px" height="500px" >
 </p>
 <p align="center">
-<img src="home.png" width="300px" >
+<img src="home.png" width="500px" >
 </p>
 
 ### Database Entity Relationship Diagrams
