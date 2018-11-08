@@ -142,8 +142,7 @@ Bo
     stripe, heroku, cloudinary, git hub, postgres,bootstrap (refer to question 5)
 thanh
     11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-Bo
-    It is similar to twitter
+    The website that is most similar to our market place is ozbargin in that signed in users can create post to list items for sale or in the case of oz bargin they can also list events happening at stores eg sales ect. users are also able to comment on post by other users to have discussion on the post much the same way our app is layed out. The big diffence between our market place an ozbargin is that ours if focused on the sale of videogames where as oz bargin users can create post for a vaiety of different categories. Another website that uses a similar layout to our app is twitter where user can create post with images or videos, discriptions and a tittle. twitter users can also make comments on post much like our app and the ozbargin website. Our app is also community driven much like twitter and oz bargin this means that we arent selling our own products on our app but instead are encouraging users to create their post and advertise their own products for sale or trade or to buy/offer trades to other users for their products.
 
     https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 
