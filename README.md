@@ -91,17 +91,55 @@ Admin
 - Delete users who are abusing the service (blocking considered)
 
 ### A workflow diagram of the user journey/s.
+<p align="center">
+<img src="flow_chart.png" width="600px" >
+</p>
 
 ### Wireframes
+<p align="center">
+<img src="login.png" width="600px" >
+</p>
+<p align="center">
+<img src="sign_up.png" width="600px" >
+</p>
+<p align="center">
+<img src="new_post.png" width="600px" >
+</p>
+<p align="center">
+<img src="home.png" width="600px" >
+</p>
 
 ### Database Entity Relationship Diagrams
+<p align="center">
+<img src="TGX_erd.png" width="600px" >
+</p>
 
-## Details of planning process including,
+## Details of planning process 
 
 ### Project plan & timeline
+Day1 
+Planning for app: user stories, models, erd, user flow a abit of group flow
+Day2 
+Focus mainly on work flow
+Day3 
+Skeleton app
+Day4
+Individual components of app: cloudinary, stripe, rolified
+Day5
+categories implemented, thanh navigator
+Day6
+Rspec, readme
+Day7
+bootstrap
+Day8
+Video Implementation, emojis
+Day9
+finilising documentation and presentation
 
 ### Screenshots of Trello board(s)
-
+<p align="center">
+<img src="trello.png" width="600px" >
+</p>
 ## Answers to the Short Answer questions
 
 1.What is the need (i.e. challenge) that you will be addressing in your project?
@@ -187,8 +225,6 @@ Our app makes use of the following third party services:stripe, heroku, cloudina
 
 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 The website that is most similar to our market place is ozbargin in that signed in users can create post to list items for sale or in the case of oz bargin they can also list events happening at stores eg sales ect. users are also able to comment on post by other users to have discussion on the post much the same way our app is layed out. The big diffence between our market place an ozbargin is that ours if focused on the sale of videogames where as oz bargin users can create post for a vaiety of different categories. Another website that uses a similar layout to our app is twitter where user can create post with images or videos, discriptions and a tittle. twitter users can also make comments on post much like our app and the ozbargin website. Our app is also community driven much like twitter and oz bargin this means that we arent selling our own products on our app but instead are encouraging users to create their post and advertise their own products for sale or trade or to buy/offer trades to other users for their products.
-
- https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html
 
 12. Discuss the database relations to be implemented.
 Our database consist of Users, Posts, comments and post_image
